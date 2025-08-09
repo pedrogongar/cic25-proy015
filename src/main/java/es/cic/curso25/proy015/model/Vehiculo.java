@@ -1,5 +1,7 @@
 package es.cic.curso25.proy015.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -35,6 +37,7 @@ public class Vehiculo {
 
     @ManyToOne(fetch = FetchType.LAZY ,optional = true)
     @JoinColumn(name = "plaza_asignada_id")
+    @JsonIgnore
     private Plaza plazaAsignada;
 
     public Vehiculo() {
