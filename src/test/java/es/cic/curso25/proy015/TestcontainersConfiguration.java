@@ -11,6 +11,7 @@ class TestcontainersConfiguration {
 
 	@Bean
 	@ServiceConnection
+	@SuppressWarnings("unused")
 	PostgreSQLContainer<?> postgresContainer() {
 		return new PostgreSQLContainer<>(DockerImageName.parse("postgres:latest"));
 	}
