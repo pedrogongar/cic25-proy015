@@ -15,5 +15,5 @@ public interface PlazaRepository extends JpaRepository<Plaza, Integer> {
 
     List<Plaza> findByVehiculoOcupanteIsNotNull();
 
-    Optional<Plaza> findByVehiculoOcupante_Id(Long vehiculoId);
+    Optional<Plaza> findByVehiculoOcupanteId(Long vehiculoId);
 }
