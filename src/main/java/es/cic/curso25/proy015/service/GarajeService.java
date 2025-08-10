@@ -161,7 +161,7 @@ public class GarajeService {
         LocalDate fechaInicio = inicio.toLocalDate();
         LocalDate fechaFinal = fin.toLocalDate();
 
-        long diferencia = ChronoUnit.DAYS.between(fechaFinal, fechaInicio);
+        long diferencia = ChronoUnit.DAYS.between(fechaInicio, fechaFinal);
 
         if (diferencia < 1) {
             return 1;
