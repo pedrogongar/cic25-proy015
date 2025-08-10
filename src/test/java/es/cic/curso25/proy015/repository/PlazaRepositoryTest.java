@@ -109,7 +109,7 @@ class PlazaRepositoryTest {
         plaza.setVehiculoOcupante(coche);
         plazaRepository.save(plaza);
 
-        Optional<Plaza> encontrada = plazaRepository.findByVehiculoOcupante_Id(coche.getId());
+        Optional<Plaza> encontrada = plazaRepository.findByVehiculoOcupanteId(coche.getId());
 
         assertTrue(encontrada.isPresent());
         assertEquals("PLAZA", encontrada.get().getDescripcion());
