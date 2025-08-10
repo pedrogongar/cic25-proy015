@@ -133,7 +133,8 @@ public class GarajeService {
 
         LOGGER.info("Plaza " + plazaActual.getId() + " liberada por vehículo " + matricula);
 
-        Optional<Multa> multaAbierta = multaRepository.findByVehiculoSancionado(vehiculo.getId(), EstadoMulta.ABIERTA);
+        Optional<Multa> multaAbierta = multaRepository.findByVehiculoSancionadoIdYEstado(vehiculo.getId(),
+                EstadoMulta.ABIERTA);
 
         if (multaAbierta.isPresent()) {
 

@@ -11,5 +11,5 @@ import es.cic.curso25.proy015.model.enums.EstadoMulta;
 @Repository
 public interface MultaRepository extends JpaRepository<Multa, Long> {
 
-    Optional<Multa> findByVehiculoSancionado(Long vehiculoId, EstadoMulta estado);
+    Optional<Multa> findByVehiculoSancionadoIdYEstado(Long vehiculoId, EstadoMulta estado);
 }

@@ -49,7 +49,7 @@ class MultaRepositoryTest {
         multa.setEstado(EstadoMulta.ABIERTA);
         multaRepository.save(multa);
 
-        Optional<Multa> encontrada = multaRepository.findByVehiculoSancionado(coche.getId(),
+        Optional<Multa> encontrada = multaRepository.findByVehiculoSancionadoIdYEstado(coche.getId(),
                 EstadoMulta.ABIERTA);
 
         assertTrue(encontrada.isPresent());
